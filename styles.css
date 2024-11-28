@@ -6,15 +6,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8ece4; /* Light beige color */
+    background-color: #f8ece4; /* Light beige */
     font-family: 'Arial', sans-serif;
 }
 
+/* Center Container */
 .container {
+    position: relative;
     text-align: center;
 }
 
+/* Logo Styling */
 .logo {
-    width: 150px; /* Adjust the size of the logo as needed */
+    width: 150px; /* Adjust size as needed */
     height: auto;
 }
