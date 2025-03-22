@@ -4,64 +4,39 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f8ece4;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow: hidden; /* Prevent scrolling completely */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling on html element too */
 }
 
 /* Header Section */
 .container {
     text-align: center;
-    padding: 50px 0;
+    padding: 0; /* Remove padding that might cause overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Use % instead of vh to match parent exactly */
 }
 
 .logo {
     width: 150px;
     height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .tagline {
-    margin-top: 20px;
     font-size: 1.2rem;
     color: #a65a44;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-/* Parallax Section */
-.hero-image-block-container {
-    position: relative;
-    height: 200vh; /* Extend height for scrolling */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-#column_container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-/* Columns */
-.hero-column {
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll; /* Enable vertical scrolling */
-    width: 33.33%; /* Equal column widths */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-    scroll-behavior: smooth; /* Smooth scrolling */
-}
-
-.hero-column::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
-}
-
-/* Image Blocks */
-.hero-image-block {
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px; /* Add spacing between blocks */
-    border-radius: 10px; /* Optional rounded corners */
+    margin-top: 0;
 }
